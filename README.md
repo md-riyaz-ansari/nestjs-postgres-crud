@@ -1,40 +1,73 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="150" alt="Nest Logo" /></a>
+  <a href="http://www.postgresql.org/" target="blank"><img src="https://www.postgresql.org/media/img/about/press/elephant.png" width="125" alt="PostgreSQL Logo" /></a>
 </p>
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+# NestJs-PostgeSQL-CRUD-Api
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/Md_Riyaz_Ansari" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+Project Description: This is a simple project built using NestJS and PostgreSQL to demonstrate CRUD operations with an example of managing books.
 
-## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## Table of Contents
+
+- [Introduction](#introduction)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Endpoints](#endpoints)
+- [License](#license)
+
+## Introduction
+
+This project is a basic example of how to perform CRUD operations (Create, Read, Update, Delete) using NestJS and PostgreSQL. It provides a simple API for managing books, including adding new books, fetching book details, updating book information, and deleting books from the database.
+
+## Features
+
+- Create a new book with details like title, author, description.
+- Fetch details of a specific book using its unique identifier.
+- Update the information of an existing book.
+- Delete a book from the database.
+
+## Requirements
+
+Before running the project, ensure you have the following installed:
+
+- Node.js
+- npm (Node Package Manager)
+- PostgreSQL database
 
 ## Installation
 
-```bash
-$ npm install
+1. Clone the repository:
+   ```
+   git clone https://github.com/md-riyaz-ansari/nestjs-postgres-crud-api.git
+   cd your-repo
+   ```
+
+2. Install the dependencies:
+   ```
+   npm install
+   ```
+
+## Configuration
+
+Before running the application, you need to set up the database configuration. Open the `.env` file and provide the required PostgreSQL database connection settings.
+
+```typescript
+POSTGRES_HOST=localhost
+POSTGRES_PORT=5432
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=password
+POSTGRES_DATABASE=book
 ```
 
-## Running the app
+## Usage
 
-```bash
+To start the application, run the following command:
+
+```
 # development
 $ npm run start
 
@@ -45,6 +78,32 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
+By default, the application will run on `http://localhost:3000/api`. You can access the API endpoints using a tool like Postman or a web browser.
+
+## Endpoints
+
+The API provides the following endpoints:
+
+- `POST /book`: Create a new book.
+- `GET /book`: Get a list of all books.
+- `GET /book:id`: Get a specific book by id.
+- `PUT /book/:id`: Update information for a specific book.
+- `DELETE /book/:id`: Delete a book.
+
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
+
+## Contributing
+
+Contributions are welcome! If you find any issues or want to enhance the project, feel free to submit a pull request.
+
+## Author
+
+- Your Name
+- GitHub: [md-riyaz-ansari](https://github.com/md-riyaz-ansari)
+- Twitter: [@Md_Riyaz_Ansari](https://twitter.com/Md_Riyaz_Ansari)
+
+---
+
+Thank you for checking out this project! If you have any questions or feedback, please feel free to reach out. Happy coding!
