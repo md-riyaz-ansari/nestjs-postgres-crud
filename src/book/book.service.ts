@@ -20,6 +20,10 @@ export class BookService {
     return from(this.postRepository.find());
   }
 
+  findBook(id: number): Observable<Book> {
+    return from(this.postRepository.findOneBy({ id }));
+  }
+
   updateBook(id: number, book: Book): Observable<UpdateResult> {
     return from(this.postRepository.update(id, book));
   }

@@ -28,6 +28,11 @@ export class BookController {
     return this.bookService.findAllBooks();
   }
 
+  @Get(':id')
+  find(@Param('id') id: number): Observable<Book> {
+    return this.bookService.findBook(id);
+  }
+
   @Put(':id')
   update(
     @Param('id') id: number,
