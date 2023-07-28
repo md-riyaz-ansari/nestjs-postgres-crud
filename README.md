@@ -1,1 +1,1 @@
-# nestjs-postgres-crud
+# nestjs-postgres-crud-api
